@@ -22,7 +22,9 @@ namespace Passenger.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IUserRepository, InMemoryUserRepository>();
+            services.AddScoped<IDriverRepository, InMemoryDriverRepository>();
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IDriverService, DriverService>();
             services.AddControllers();
         }
 
