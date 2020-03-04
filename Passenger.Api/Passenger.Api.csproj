@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Passenger.Infrastructure" Version="1.0.*" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Passenger.Infrastructure\Passenger.Infrastructure.csproj" />
   </ItemGroup>
 </Project>
