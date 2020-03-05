@@ -1,9 +1,11 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Passenger.Core.Repositories;
+using Passenger.Infrastructure.Mappers;
 using Passenger.Infrastructure.Repositories;
 using Passenger.Infrastructure.Services;
 
@@ -25,6 +27,7 @@ namespace Passenger.Api
             services.AddScoped<IDriverRepository, InMemoryDriverRepository>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IDriverService, DriverService>();
+            services.AddSingleton(AutoMapperConfig.Initialize());
             services.AddControllers();
         }
 
